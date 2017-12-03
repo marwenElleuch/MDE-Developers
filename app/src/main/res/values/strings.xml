@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">DevFest</string>
+    <string name="title_activity_hackaton">HackatonActivity</string>
+    <string name="detail">
+        GDG Sfax won\'t ever stop surprising you! Did you think that DevFest IoT workshop is only what we have prepared for you? So you are not guessing it right because here we are presenting you DevFest THE HACKATHON
+    </string>
+    <string name="title_activity_inscription">InscriptionActivity</string>
+    <string name="inscrire">s\'inscrire</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_juri">JuriActivity</string>
+    <string name="title_activity_nav">NavActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+</resources>
