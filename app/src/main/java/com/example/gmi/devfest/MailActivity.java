@@ -10,9 +10,14 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 public class MailActivity extends AppCompatActivity {
+    Button sendEmailButton;
+    EditText emailAddress;
+    EditText emailSubject;
+    EditText message;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,12 +25,7 @@ public class MailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_mail);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        Button startBtn = (Button) findViewById(R.id.sendEmail);
-        startBtn.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                sendEmail();
-            }
-        });
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,9 +34,31 @@ public class MailActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        emailAddress = (EditText) findViewById(R.id.email);
+        emailSubject = (EditText) findViewById(R.id.subject);
+        message = (EditText) findViewById(R.id.message);
+        sendEmailButton = (Button) findViewById(R.id.send_button);
+
+        sendEmailButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String toemailAddress = emailAddress.getText().toString();
+                String msubject = emailSubject.getText().toString();
+                String mmessage = message.getText().toString();
+
+                Intent emailApp = new Intent(Intent.ACTION_SEND);
+                emailApp.putExtra(Intent.EXTRA_EMAIL, new String[]{toemailAddress});
+                emailApp.putExtra(Intent.EXTRA_SUBJECT, msubject);
+                emailApp.putExtra(Intent.EXTRA_TEXT, mmessage);
+                emailApp.setType("message/rfc822");
+                startActivity(Intent.createChooser(emailApp, "Send Email Via"));
+
+            }
+        });
     }
 
-    protected void sendEmail() {
+    /*protected void sendEmail() {
         Log.i("Send email", "");
         String[] TO = {""};
         String[] CC = {""};
@@ -56,5 +78,5 @@ public class MailActivity extends AppCompatActivity {
         } catch (android.content.ActivityNotFoundException ex) {
             Toast.makeText(MailActivity.this, "There is no email client installed.", Toast.LENGTH_SHORT).show();
         }
-    }
+    }*/
 }
