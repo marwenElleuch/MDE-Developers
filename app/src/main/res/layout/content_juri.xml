@@ -28,7 +28,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="number"
                 android:ems="10"
-                android:hint="deisgn"/>
+                android:hint="deisgn/10"/>
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
@@ -43,7 +43,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="number"
                 android:ems="10"
-                android:hint="deisgn"/>
+                android:hint="inovation /10"/>
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
@@ -58,7 +58,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="number"
                 android:ems="10"
-                android:hint="deisgn"/>
+                android:hint="qualite code /10"/>
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
@@ -73,7 +73,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="number"
                 android:ems="10"
-                android:hint="deisgn"/>
+                android:hint="presentation /10"/>
         </android.support.design.widget.TextInputLayout>
 
         <Button

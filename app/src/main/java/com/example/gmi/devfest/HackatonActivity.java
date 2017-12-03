@@ -14,7 +14,6 @@ import android.widget.Toast;
 
 public class HackatonActivity extends AppCompatActivity {
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

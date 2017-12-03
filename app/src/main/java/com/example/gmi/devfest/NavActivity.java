@@ -82,13 +82,12 @@ public class NavActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_camera) {
-            startActivity( new Intent(getApplicationContext(),HackatonActivity.class));
+            // Handle the camera action
+            startActivity(new Intent(getApplicationContext(),HackatonActivity.class));
         } else if (id == R.id.nav_gallery) {
-
+            startActivity(new Intent(getApplicationContext(),MailActivity.class));
         } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
-
+            startActivity(new Intent(getApplicationContext(),JuriActivity.class));
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {
